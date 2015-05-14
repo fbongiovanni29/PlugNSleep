@@ -1,7 +1,15 @@
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+    // Now safe to use device APIs
+
+var info
+
 window.addEventListener("batterystatus", onBatteryStatus, false);
 
 function onBatteryStatus(info) {
     // Handle the online event
-    console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+    console.log(info.isPlugged);
 }
-console.log("Fuck this shit");
+onBatteryStatus(info);
+}
